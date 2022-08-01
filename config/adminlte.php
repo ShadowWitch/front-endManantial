@@ -16,7 +16,7 @@ return [
 
     'title' => 'AdminLTE 3',
     'title_prefix' => '',
-    'title_postfix' => '::AquaManantial',
+    'title_postfix' => ':: AquaManantial',
 
     /*
     |--------------------------------------------------------------------------
@@ -233,95 +233,256 @@ return [
 
         // Sidebar items:
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        [
-            'text' => 'empresas',
-            'route'  => 'empresas'
-        ],
+        ['header' => 'REPORTES Y ESTADISTICAS'],
         [
             'text' => 'Reportes',
-            'route'  => 'reportes',
-            'icon' => 'fas fa-fw fa-bug'
-        ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
+            'icon' => 'fas fa-fw fa-bug',
+            'submenu' =>[
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Agregar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-pen',
+                    'icon_color' => 'danger'
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Mostrar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-bars',
+                    'icon_color' => 'danger'
                 ],
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Actualizar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-clipboard',
+                    'icon_color' => 'danger'
+                ]
+            ]
+        ],
+        [
+            'text' => 'Estadisticas',
+            'icon' => 'fas fa-fw fa-chart-pie',
+            'submenu' =>[
+                [
+                    'text' => 'Agregar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-pen',
+                    'icon_color' => 'danger'
                 ],
-            ],
+                [
+                    'text' => 'Mostrar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-bars',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Actualizar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-clipboard',
+                    'icon_color' => 'danger'
+                ]
+            ]
         ],
-        ['header' => 'labels'],
+        ['header' => 'VENTAS Y COMPRAS'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text' => 'Pedidos',
+            'icon' => 'fas fa-fw fa-dolly',
+            'submenu' =>[
+                [
+                    'text' => 'Agregar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-pen',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Mostrar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-bars',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Actualizar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-clipboard',
+                    'icon_color' => 'danger'
+                ]
+            ]
+        ],
+        ['header' => 'PRODUCTOS Y MARCAS'],
+        [
+            'text' => 'Marcas',
+            'icon' => 'fas fa-fw fa-shower',
+            'submenu' =>[
+                [
+                    'text' => 'Agregar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-pen',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Mostrar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-bars',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Actualizar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-clipboard',
+                    'icon_color' => 'danger'
+                ]
+            ]
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'text' => 'Inventario',
+            'icon' => 'fas fa-fw fa-boxes',
+            'submenu' =>[
+                [
+                    'text' => 'Agregar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-pen',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Mostrar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-bars',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Actualizar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-clipboard',
+                    'icon_color' => 'danger'
+                ]
+            ]
+        ],
+        ['header' => 'METODOS DE ENVIO Y EMPRESAS'],
+        [
+            'text' => 'Empresas',
+            'icon' => 'fas fa-fw fa-building',
+            'submenu' =>[
+                [
+                    'text' => 'Agregar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-pen',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Mostrar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-bars',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Actualizar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-clipboard',
+                    'icon_color' => 'danger'
+                ]
+            ]
         ],
         [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text' => 'Distribucion',
+            'icon' => 'fas fa-fw fa-truck',
+            'submenu' =>[
+                [
+                    'text' => 'Agregar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-pen',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Mostrar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-bars',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Actualizar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-clipboard',
+                    'icon_color' => 'danger'
+                ]
+            ]
         ],
+        ['header' => 'DIRECCIONES'],
+        [
+            'text' => 'Paises',
+            'icon' => 'fas fa-fw fa-flag',
+            'submenu' =>[
+                [
+                    'text' => 'Agregar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-pen',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Mostrar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-bars',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Actualizar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-clipboard',
+                    'icon_color' => 'danger'
+                ]
+            ]
+        ],
+        [
+            'text' => 'Departamento',
+            'icon' => 'fas fa-fw fa-home',
+            'submenu' =>[
+                [
+                    'text' => 'Agregar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-pen',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Mostrar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-bars',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Actualizar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-clipboard',
+                    'icon_color' => 'danger'
+                ]
+            ]
+        ],
+        [
+            'text' => 'Municipio',
+            'icon' => 'fas fa-fw fa-route',
+            'submenu' =>[
+                [
+                    'text' => 'Agregar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-pen',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Mostrar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-bars',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Actualizar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-clipboard',
+                    'icon_color' => 'danger'
+                ]
+            ]
+        ],
+        ['header' => 'Grupo#1 | Lenguaje IV copyright ©',],
     ],
 
     /*

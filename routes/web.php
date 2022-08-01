@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReportesController;
+use App\Http\Controllers\ControlpanelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::get('login', function () {
 });
 
 
-Route::get('reportes', [ReportesController::class, 'index_reportes'])->name('reportes');
+Route::get('control-panel', [ControlpanelController::class, 'index_panel'])->name('control_panel');
 
 Route::get('empresas', [ReportesController::class, 'index_empresas'])->name('empresas');
 
