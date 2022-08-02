@@ -239,6 +239,30 @@ return [
         ],
         ['header' => 'REPORTES Y ESTADISTICAS'],
         [
+            'text' => 'Cursos',
+            'icon' => 'fas fa-fw fa-bug',
+            'submenu' =>[
+                [
+                    'text' => 'Agregar',
+                    'url' => 'www.facebook.com',
+                    'icon' => 'fa fa-fw fa-pen',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Mostrar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-bars',
+                    'icon_color' => 'danger'
+                ],
+                [
+                    'text' => 'Actualizar',
+                    'url' => '#',
+                    'icon' => 'fa fa-fw fa-clipboard',
+                    'icon_color' => 'danger'
+                ]
+            ]
+        ],
+        [
             'text' => 'Reportes',
             'icon' => 'fas fa-fw fa-bug',
             'submenu' =>[
@@ -367,7 +391,7 @@ return [
             'submenu' =>[
                 [
                     'text' => 'Agregar',
-                    'url' => '#',
+                    'route' => 'controlpanel_empresas_add',
                     'icon' => 'fa fa-fw fa-pen',
                     'icon_color' => 'danger'
                 ],
@@ -541,7 +565,7 @@ return [
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -570,8 +594,8 @@ return [
             'files' => [
                 [
                     'type' => 'js',
-                    'asset' => false,
-                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
+                    'asset' => true,
+                    'location' => 'vendor/sweetalert2/sweetalert2.all.min.js',
                 ],
             ],
         ],
