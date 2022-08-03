@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <form id="formEmpresa" action="{{ route('controlpanel_empresas_ins') }}" method="GET">
+    <form id="formEmpresa" action="{{ route('controlpanel_empresas_ins') }}" method="get">
         <div class="d-flex justify-content-between">
             <div class="mb-3 w-75 me-5">
                 <label class="form-label">Nombre Empresa</label>
@@ -52,9 +52,6 @@
                 <label class="form-label">Municipio</label>
                 <select class="form-select" name="cod_municipio" id="selectMunicipio" aria-label="Default select example">
                     <option value="null" selected>Seleccione Municipio</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
                 </select>
             </div>
         </div>

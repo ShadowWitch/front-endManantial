@@ -45,16 +45,16 @@ class EmpresaController extends Controller
             "tip_empresa"=>$tip_empresa
         );
 
-        $res = Http::post("http://localhost:3000/empresa", $miData);
 
-        return $res;
+        $res = Http::post("http://localhost:3000/empresa", $miData);
+        return redirect(route('controlpanel_empresas_add'));
     }
 
 
     public function getMunicipios_x_depto($cod_depto){
-        $deptos = Http::get("http://localhost:3000/municipio/$cod_depto");
+        $municipios = Http::get("http://localhost:3000/municipio/$cod_depto");
 
-        return $deptos;
+        return $municipios;
     }
 
 
