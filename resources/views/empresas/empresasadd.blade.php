@@ -9,20 +9,26 @@
 @stop
 
 @section('content')
-    <form>
-        <div class="mb-3">
-            <label class="form-label">Nombre Empresa</label>
-            <input type="text" class="form-control" placeholder="Ingrese nombre de empresa">
+    <form id="formEmpresa" action="{{ route('controlpanel_empresas_ins') }}" method="GET">
+        <div class="d-flex justify-content-between">
+            <div class="mb-3 w-75 me-5">
+                <label class="form-label">Nombre Empresa</label>
+                <input type="text" name="nom_empresa" class="form-control" placeholder="Ingrese nombre de empresa">
+            </div>
+            <div class="mb-3 w-25">
+                <label class="form-label">Tipo Empresa</label>
+                <input type="text" name="tip_empresa" class="form-control" placeholder="Ingrese tipo de empresa">
+            </div>
         </div>
         <div class="d-flex justify-content-between">
             <div class="mb-3 w-25">
                 <label class="form-label">Numero Telefono</label>
-                <input type="text" class="form-control" placeholder="Ingrese nombre de empresa">
+                <input type="text" name="num_telefono" class="form-control" pattern="^[0-9]{8}$" placeholder="Ingrese tel. de empresa">
             </div>
             <div class="mb-3">
                 <label class="form-label">Tipo Telefono</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Seleccione Tipo</option>
+                <select class="form-select" name="tip_telefono" aria-label="Default select example">
+                    <option value="null" selected>Seleccione Tipo</option>
                     <option value="F">Fijo</option>
                     <option value="C">Celular (movil)</option>
                 </select>
@@ -39,13 +45,13 @@
             <div class="mb-3">
                 <label class="form-label">Departamento</label>
                 <select class="form-select" id="selectDepto" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
+                    <option value="null" selected>Seleccione Depto</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label class="form-label">Municipio</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
+                <select class="form-select" name="cod_municipio" id="selectMunicipio" aria-label="Default select example">
+                    <option value="null" selected>Seleccione Municipio</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
@@ -55,28 +61,12 @@
       
         <div class="mb-3">
             <label class="form-label">Descripcion Direccion</label>
-            <textarea class="form-control" placeholder="Ingrese una descripcion de direccion" cols="30" rows="10"></textarea>
+            <textarea class="form-control" name="desc_direccion" placeholder="Ingrese una descripcion de direccion" cols="30" rows="8" style="resize:none;"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary w-25">Registrar</button>
+        </div>
     </form>
-    <button class="btn btn-primary" id="btnAceptar" >Aceptar</button>
-
-    <div class="col-md-3 col-sm-6 col-12">
-        <div class="info-box bg-success">
-        <span class="info-box-icon"><i class="far fa-thumbs-up"></i></span>
-        <div class="info-box-content">
-        <span class="info-box-text">Likes</span>
-        <span class="info-box-number">41,410</span>
-        <div class="progress">
-        <div class="progress-bar" style="width: 50%"></div>
-        </div>
-            <span class="progress-description">
-            70% Increase in 30 Days
-            </span>
-        </div>
-        </div>
-    </div>
-
 @stop
 
 @section('css')
@@ -84,40 +74,9 @@
 @stop
 
 @section('js')
-    <script>
-        const selectPais = document.getElementById('selectPais')
-        const selectDepto = document.getElementById('selectDepto')
+   
+    <script src="/js/empresas.js"></script>
 
-        // const limpiarSelect = (inputSelect) => {
-        //     const tamanio = inputSelect.options.length;
-        //     console.log(tamanio)
-        // }
-
-        selectPais.addEventListener('change', async (e) =>{
-            let idPais = selectPais.value;
-
-            if(idPais !== 'null'){
-                fetch(`http://localhost:3000/depto/pais/${idPais}`)
-                .then(res => res.json())
-                .then(data => {
-                    const {result} = data;
-                    const fragmento = document.createDocumentFragment()
-
-                    result.forEach(element => {
-                        // console.log(element.cod_depto)
-                        const option = document.createElement('option');
-                        option.setAttribute('value', element.cod_depto);
-                        option.textContent = element.nom_depto;
-
-                        fragmento.appendChild(option)
-                    });
-                    selectDepto.appendChild(fragmento)
-                })
-            }
-            
-        })
-
-    </script>
 @stop
 
 
