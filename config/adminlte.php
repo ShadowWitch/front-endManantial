@@ -364,26 +364,7 @@ return [
         [
             'text' => 'Empresas',
             'icon' => 'fas fa-fw fa-building',
-            'submenu' =>[
-                [
-                    'text' => 'Agregar',
-                    'route' => 'controlpanel_empresas_add',
-                    'icon' => 'fa fa-fw fa-pen',
-                    'icon_color' => 'danger'
-                ],
-                [
-                    'text' => 'Mostrar',
-                    'url' => '#',
-                    'icon' => 'fa fa-fw fa-bars',
-                    'icon_color' => 'danger'
-                ],
-                [
-                    'text' => 'Actualizar',
-                    'url' => '#',
-                    'icon' => 'fa fa-fw fa-clipboard',
-                    'icon_color' => 'danger'
-                ]
-            ]
+            'route' => 'controlpanel_empresas_add'
         ],
         [
             'text' => 'Distribucion',
@@ -521,7 +502,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',

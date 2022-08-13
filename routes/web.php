@@ -33,7 +33,7 @@ Route::get('control-panel/dados', [ControlpanelController::class, 'tirar_dados']
 
 Route::controller(EmpresaController::class)->group(function(){
     // GETS
-    Route::get('control-panel/empresas-show',)->name('controlpanel_empresas_show');
+    Route::get('control-panel/empresas-show/{id_empresa}', 'empresas_show')->name('controlpanel_empresas_show'); // Traer datos de la empresa para luego actualizarlos
     Route::get('control-panel/empresas-getdeptoxpais/{cod_pais}', 'getDeptos_x_pais');
     Route::get('control-panel/empresas-getmunicipioxdepto/{cod_depto}', 'getMunicipios_x_depto');
     Route::get('control-panel/empresas-add', 'empresas_add')->name('controlpanel_empresas_add');
@@ -42,7 +42,7 @@ Route::controller(EmpresaController::class)->group(function(){
     Route::get('control-panel/empresas-add-ins', 'ins_empresas')->name('controlpanel_empresas_ins');
 
     // PUT
-    Route::get('control-panel/empresas-upt',)->name('controlpanel_empresas_upt');
+    Route::get('control-panel/empresas-upt/{id_empresa}', 'upt_empresas')->name('controlpanel_empresas_upt');
 
 });
 
