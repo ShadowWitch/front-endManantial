@@ -23,6 +23,7 @@
                 <th>Tiempo</th>
                 <th>Formato</th>
                 <th>Fecha</th>
+                <th>Accion</th>
             </tr>
         </thead>
         
