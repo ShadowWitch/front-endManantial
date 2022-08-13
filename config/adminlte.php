@@ -241,26 +241,7 @@ return [
         [
             'text' => 'Reportes',
             'icon' => 'fas fa-fw fa-bug',
-            'submenu' =>[
-                [
-                    'text' => 'Agregar',
-                    'url' => '#',
-                    'icon' => 'fa fa-fw fa-pen',
-                    'icon_color' => 'danger'
-                ],
-                [
-                    'text' => 'Mostrar',
-                    'url' => '#',
-                    'icon' => 'fa fa-fw fa-bars',
-                    'icon_color' => 'danger'
-                ],
-                [
-                    'text' => 'Actualizar',
-                    'url' => '#',
-                    'icon' => 'fa fa-fw fa-clipboard',
-                    'icon_color' => 'danger'
-                ]
-            ]
+            'route' => 'controlpanel_reportes_add'
         ],
         [
             'text' => 'Estadisticas',
