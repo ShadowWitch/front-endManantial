@@ -62,7 +62,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="formReportes" accept="{{ route('controlpanel_ins_reportes') }}" method="POST">
+                    <form id="formReportes" action="{{ route('controlpanel_ins_reportes') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="d-flex justify-content-between">
                             <div class="mb-1 me-4">
                                 <label class="form-label">Titulo Reporte</label>
@@ -119,7 +120,7 @@
                         <div>
                             <div class="mb-1 w-50">
                                 <label class="form-label">Seleccione Archivo</label>
-                                <input type="file" name="mi_archivo">
+                                <input type="file" name="mi_archivo" accept="image/*, .pdf, .docx, .xlsx, .txt, .text">
                             </div>
                         </div>
 

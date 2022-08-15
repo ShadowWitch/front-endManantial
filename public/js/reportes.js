@@ -24,7 +24,6 @@ btnPrueba.addEventListener('click', e => {
 
 })
 
-/*
 formReportes.addEventListener('submit', e => {
     e.preventDefault()
     const miData = { titulo_reporte, correo_electronico, desc_reporte, hora_generar_reporte, tipo_reporte, tiempo_generar_reporte, ind_reporte, mi_archivo } = formReportes;
@@ -38,23 +37,18 @@ formReportes.addEventListener('submit', e => {
         return toastr.error('Tiene que subir un archivo.')
     }
 
-    // fetch('reportes-add/reportes-ins', {
-    //         method: 'POST',
+    // fetch('ins_reportes', {
+    //         method: 'POSt',
     //         body: formData
     //     })
     //     .then(res => res.json())
-    //     .then(data => {
-    //         console.log(data)
-    //         toastr.success('Reporte registrado con exito!')
-    //     })
-    //     .catch(err => {
-    //         console.log('ERROR ACA>>', err)
-    //         toastr.error('Error al registrar reporte.')
-    //     })
+    //     .then(data => console.log(data))
+    //     .catch(err => console.log(err))
+
+    // console.log(formData.get('mi_archivo'))
 
     formReportes.submit()
 })
-*/
 
 
 
