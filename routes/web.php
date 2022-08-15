@@ -54,6 +54,9 @@ Route::controller(ReportesController::class)->group(function(){
     // GETS
         // Reportes
     Route::get('control-panel/reportes-add', 'reportes_add')->name('controlpanel_reportes_add');
+
+
+    Route::post('control-panel/ins_reportes', 'ins_reportes')->name('controlpanel_ins_reportes');
 });
 
 

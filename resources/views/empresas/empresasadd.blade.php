@@ -9,7 +9,6 @@
         <h1>Registrar Empresas</h1>
         <button type="button" class="btn btn-primary ms-auto w-25" data-bs-toggle="modal" data-bs-target="#modalEmpresas">Agregar Empresa</button>
     </div>
-
 @stop
 
 @section('content')
