@@ -83,8 +83,8 @@
                        
                         <div>
                             <div class="mb-1">
-                                <label class="form-label">Hora</label>
-                                <input type="time" min="00:00" max="12:00" name="hora_generar_reporte" class="form-control">
+                                <label class="form-label">Hora <span class="fst-italic fs-6">(Recuerde que abrimos de 5am a 12pm)</span></label>
+                                <input type="time" min="05:00" max="12:00" name="hora_generar_reporte" class="form-control">
                             </div>
                             <div class="mb-1">
                                 <label class="form-label">Tipo Reporte</label>

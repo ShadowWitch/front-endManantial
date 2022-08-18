@@ -47,6 +47,7 @@ formReportes.addEventListener('submit', e => {
 
     // console.log(formData.get('mi_archivo'))
 
+    console.log(formData.get('mi_archivo'))
     formReportes.submit()
 })
 
